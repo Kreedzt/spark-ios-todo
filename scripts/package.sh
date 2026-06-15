@@ -21,21 +21,52 @@ mkdir -p "$OUT_DIR"
 
 # 需要排除的归档成员模式（与 .gitignore 保持一致）
 EXCLUDES=(
+  # 版本控制 / 工具
   '.git/*'
   '*/.git/*'
   '.claude/*'
+  # macOS
+  '*.DS_Store'
+  '*.AppleDouble'
+  '*.LSOverride'
+  # Xcode 构建产物
   'dist/*'
   'build/*'
   '*/build/*'
   'DerivedData/*'
   '*/DerivedData/*'
+  '*.ipa'
+  '*.dSYM'
+  '*.dSYM.zip'
+  # Xcode 用户专属
+  '*xcuserdata*'
+  '*.xcuserstate'
+  '*.xcscmblueprint'
+  '*.xccheckout'
+  '*.moved-aside'
+  '*.hmap'
+  # Swift Package Manager
   '.swiftpm/*'
   '*/.swiftpm/*'
   '.build/*'
   '*/.build/*'
-  '*xcuserdata*'
-  '*.xcuserstate'
-  '*.DS_Store'
+  'Package.resolved'
+  # CocoaPods / Carthage
+  'Pods/*'
+  'Carthage/Build/*'
+  # Node / Slidev（演示稿依赖与导出产物）
+  'node_modules/*'
+  '*/node_modules/*'
+  '.slidev/*'
+  '*/.slidev/*'
+  'slidev-export.pdf'
+  '*-export.pdf'
+  # 演示 / 演讲 / 临时文稿（不属于项目代码，不打包）
+  'slides.md'
+  '演讲稿.md'
+  '*.txt'
+  'scripts/*'
+  'docs/*'
 )
 
 ARGS=()

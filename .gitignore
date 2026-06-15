@@ -37,5 +37,10 @@ Carthage/Build/
 # 打包脚本输出
 dist/
 
+# Slidev 演示稿产物
+.slidev/
+slidev-export.pdf
+*-export.pdf
+
 # 文档目录需要纳入追踪（防止被全局规则误忽略）
 !docs/
