@@ -67,6 +67,7 @@ EXCLUDES=(
   '*.txt'
   'scripts/*'
   'docs/*'
+  'CLAUDE.md'
 )
 
 ARGS=()

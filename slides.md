@@ -166,6 +166,7 @@ final class TodoFormViewModel {
     }
     func save(in ctx: ModelContext) -> Bool {
         guard isValid else { return false }
+        // editingItem != nil 时改为更新既有任务
         ctx.insert(TodoItem(title: title, ...))
         try? ctx.save()
         return true
