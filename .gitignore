@@ -1,0 +1,40 @@
+# Claude
+.claude/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode - 用户专属与构建产物
+## Build generated
+build/
+DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## User settings / state（用户专属，不应纳入版本控制）
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+## Obsolete
+*.moved-aside
+*.hmap
+
+# Swift Package Manager
+.swiftpm/
+.build/
+Package.resolved
+
+# CocoaPods / Carthage（本项目未使用，预留）
+Pods/
+Carthage/Build/
+
+# 打包脚本输出
+dist/
+
+# 文档目录需要纳入追踪（防止被全局规则误忽略）
+!docs/
