@@ -1,5 +1,6 @@
 # Claude
 .claude/
+node_modules/
 
 # macOS
 .DS_Store
